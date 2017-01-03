@@ -1,0 +1,261 @@
+{
+  "layout": "[ {\n  \"type\" : \"opex.ResourceNode\",\n  \"size\" : {\n    \"width\" : 150,\n    \"height\" : 45\n  },\n  \"packageHeight\" : 25,\n  \"resourceNodeHeight\" : 40,\n  \"paddingBottom\" : 5,\n  \"minWidth\" : 150,\n  \"imageHeight\" : 18,\n  \"inPorts\" : [ ],\n  \"outPorts\" : [ ],\n  \"position\" : {\n    \"x\" : 214,\n    \"y\" : 478\n  },\n  \"angle\" : 0,\n  \"resourceNode\" : \"Application_VPC\",\n  \"resource\" : {\n    \"name\" : \"Application_VPC\",\n    \"resourceName\" : \"aws_vpc\",\n    \"count\" : 1\n  },\n  \"image\" : \"/images/aws/vpc/Networking_AmazonVPC.png\",\n  \"style\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"type\" : \"linearGradient\",\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ],\n        \"attrs\" : {\n          \"x1\" : \"0%\",\n          \"y1\" : \"0%\",\n          \"x2\" : \"0%\",\n          \"y2\" : \"100%\"\n        }\n      }\n    },\n    \".resourceNode-text\" : {\n      \"fill\" : \"white\"\n    }\n  },\n  \"packages\" : [ ],\n  \"id\" : \"01c6005b-301f-4a62-aef0-f4417488b51d\",\n  \"z\" : 1,\n  \"hideDeleteIcons\" : true,\n  \"attrs\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ]\n      }\n    },\n    \".packages\" : {\n      \"ref-y\" : 40\n    },\n    \".count-text\" : {\n      \"text\" : \"1\"\n    },\n    \".delete-resource\" : {\n      \"resourceId\" : 40\n    },\n    \".success-status\" : {\n      \"display\" : \"block\"\n    },\n    \".resourceNode-text\" : {\n      \"text\" : \"Application_VPC\",\n      \"y\" : \"2.6em\"\n    },\n    \".resourceNode-image\" : {\n      \"xlink:href\" : \"/images/aws/vpc/Networking_AmazonVPC.png\",\n      \"display\" : \"\"\n    },\n    \".count-circle\" : {\n      \"display\" : \"none\"\n    }\n  }\n}, {\n  \"type\" : \"opex.ResourceNode\",\n  \"size\" : {\n    \"width\" : 150,\n    \"height\" : 45\n  },\n  \"packageHeight\" : 25,\n  \"resourceNodeHeight\" : 40,\n  \"paddingBottom\" : 5,\n  \"minWidth\" : 150,\n  \"imageHeight\" : 18,\n  \"inPorts\" : [ ],\n  \"outPorts\" : [ ],\n  \"position\" : {\n    \"x\" : 531,\n    \"y\" : 203\n  },\n  \"angle\" : 0,\n  \"resourceNode\" : \"Application_Subnet\",\n  \"resource\" : {\n    \"name\" : \"Application_Subnet\",\n    \"resourceName\" : \"aws_subnet\",\n    \"count\" : 1\n  },\n  \"image\" : \"/images/aws/vpc/Networking_AmazonVPCSubnet.png\",\n  \"style\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"type\" : \"linearGradient\",\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ],\n        \"attrs\" : {\n          \"x1\" : \"0%\",\n          \"y1\" : \"0%\",\n          \"x2\" : \"0%\",\n          \"y2\" : \"100%\"\n        }\n      }\n    },\n    \".resourceNode-text\" : {\n      \"fill\" : \"white\"\n    }\n  },\n  \"packages\" : [ ],\n  \"id\" : \"b6aa74e9-3320-4bbd-87e3-e5c8cd1f9034\",\n  \"z\" : 2,\n  \"hideDeleteIcons\" : true,\n  \"attrs\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ]\n      }\n    },\n    \".packages\" : {\n      \"ref-y\" : 40\n    },\n    \".count-text\" : {\n      \"text\" : \"1\"\n    },\n    \".delete-resource\" : {\n      \"resourceId\" : 29\n    },\n    \".success-status\" : {\n      \"display\" : \"block\"\n    },\n    \".resourceNode-text\" : {\n      \"text\" : \"Application_Subnet\",\n      \"y\" : \"2.6em\"\n    },\n    \".resourceNode-image\" : {\n      \"xlink:href\" : \"/images/aws/vpc/Networking_AmazonVPCSubnet.png\",\n      \"display\" : \"\"\n    },\n    \".count-circle\" : {\n      \"display\" : \"none\"\n    }\n  }\n}, {\n  \"type\" : \"opex.ResourceNode\",\n  \"size\" : {\n    \"width\" : 150,\n    \"height\" : 45\n  },\n  \"packageHeight\" : 25,\n  \"resourceNodeHeight\" : 40,\n  \"paddingBottom\" : 5,\n  \"minWidth\" : 150,\n  \"imageHeight\" : 18,\n  \"inPorts\" : [ ],\n  \"outPorts\" : [ ],\n  \"position\" : {\n    \"x\" : 535,\n    \"y\" : 362\n  },\n  \"angle\" : 0,\n  \"resourceNode\" : \"xELB_Subnet\",\n  \"resource\" : {\n    \"name\" : \"xELB_Subnet\",\n    \"resourceName\" : \"aws_subnet\",\n    \"count\" : 1\n  },\n  \"image\" : \"/images/aws/vpc/Networking_AmazonVPCSubnet.png\",\n  \"style\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"type\" : \"linearGradient\",\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ],\n        \"attrs\" : {\n          \"x1\" : \"0%\",\n          \"y1\" : \"0%\",\n          \"x2\" : \"0%\",\n          \"y2\" : \"100%\"\n        }\n      }\n    },\n    \".resourceNode-text\" : {\n      \"fill\" : \"white\"\n    }\n  },\n  \"packages\" : [ ],\n  \"id\" : \"5d05996e-d8ba-4936-843e-ae6a64b17185\",\n  \"z\" : 6,\n  \"hideDeleteIcons\" : true,\n  \"attrs\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ]\n      }\n    },\n    \".packages\" : {\n      \"ref-y\" : 40\n    },\n    \".count-text\" : {\n      \"text\" : \"1\"\n    },\n    \".delete-resource\" : {\n      \"resourceId\" : 37\n    },\n    \".success-status\" : {\n      \"display\" : \"block\"\n    },\n    \".resourceNode-text\" : {\n      \"text\" : \"xELB_Subnet\",\n      \"y\" : \"2.6em\"\n    },\n    \".resourceNode-image\" : {\n      \"xlink:href\" : \"/images/aws/vpc/Networking_AmazonVPCSubnet.png\",\n      \"display\" : \"\"\n    },\n    \".count-circle\" : {\n      \"display\" : \"none\"\n    }\n  }\n}, {\n  \"type\" : \"opex.ResourceNode\",\n  \"size\" : {\n    \"width\" : 150,\n    \"height\" : 45\n  },\n  \"packageHeight\" : 25,\n  \"resourceNodeHeight\" : 40,\n  \"paddingBottom\" : 5,\n  \"minWidth\" : 150,\n  \"imageHeight\" : 18,\n  \"inPorts\" : [ ],\n  \"outPorts\" : [ ],\n  \"position\" : {\n    \"x\" : 905,\n    \"y\" : 424\n  },\n  \"angle\" : 0,\n  \"resourceNode\" : \"xELB\",\n  \"resource\" : {\n    \"name\" : \"xELB\",\n    \"resourceName\" : \"aws_elb\",\n    \"count\" : 1\n  },\n  \"image\" : \"/images/aws/ec2/Compute_ElasticLoadBalancing.png\",\n  \"style\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"type\" : \"linearGradient\",\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ],\n        \"attrs\" : {\n          \"x1\" : \"0%\",\n          \"y1\" : \"0%\",\n          \"x2\" : \"0%\",\n          \"y2\" : \"100%\"\n        }\n      }\n    },\n    \".resourceNode-text\" : {\n      \"fill\" : \"white\"\n    }\n  },\n  \"packages\" : [ ],\n  \"id\" : \"22484d0c-8554-46a1-8a4f-82ad00e713ce\",\n  \"z\" : 9,\n  \"hideDeleteIcons\" : true,\n  \"attrs\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ]\n      }\n    },\n    \".packages\" : {\n      \"ref-y\" : 40\n    },\n    \".count-text\" : {\n      \"text\" : \"1\"\n    },\n    \".delete-resource\" : {\n      \"resourceId\" : 30\n    },\n    \".success-status\" : {\n      \"display\" : \"block\"\n    },\n    \".resourceNode-text\" : {\n      \"text\" : \"xELB\",\n      \"y\" : \"2.6em\"\n    },\n    \".resourceNode-image\" : {\n      \"xlink:href\" : \"/images/aws/ec2/Compute_ElasticLoadBalancing.png\",\n      \"display\" : \"\"\n    },\n    \".count-circle\" : {\n      \"display\" : \"none\"\n    }\n  }\n}, {\n  \"type\" : \"opex.ResourceNode\",\n  \"size\" : {\n    \"width\" : 150,\n    \"height\" : 45\n  },\n  \"packageHeight\" : 25,\n  \"resourceNodeHeight\" : 40,\n  \"paddingBottom\" : 5,\n  \"minWidth\" : 150,\n  \"imageHeight\" : 18,\n  \"inPorts\" : [ ],\n  \"outPorts\" : [ ],\n  \"position\" : {\n    \"x\" : 897,\n    \"y\" : 325\n  },\n  \"angle\" : 0,\n  \"resourceNode\" : \"xELB_NAT_Gateway\",\n  \"resource\" : {\n    \"name\" : \"xELB_NAT_Gateway\",\n    \"resourceName\" : \"aws_nat_gateway\",\n    \"count\" : 1\n  },\n  \"image\" : \"/images/aws/vpc/nat-gateway.png\",\n  \"style\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"type\" : \"linearGradient\",\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ],\n        \"attrs\" : {\n          \"x1\" : \"0%\",\n          \"y1\" : \"0%\",\n          \"x2\" : \"0%\",\n          \"y2\" : \"100%\"\n        }\n      }\n    },\n    \".resourceNode-text\" : {\n      \"fill\" : \"white\"\n    }\n  },\n  \"packages\" : [ ],\n  \"id\" : \"1c7b2e5b-7c52-4ec2-b33c-f51ca364460c\",\n  \"z\" : 13,\n  \"hideDeleteIcons\" : true,\n  \"attrs\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ]\n      }\n    },\n    \".packages\" : {\n      \"ref-y\" : 40\n    },\n    \".count-text\" : {\n      \"text\" : \"1\"\n    },\n    \".delete-resource\" : {\n      \"resourceId\" : 39\n    },\n    \".success-status\" : {\n      \"display\" : \"block\"\n    },\n    \".resourceNode-text\" : {\n      \"text\" : \"xELB_NAT_Gateway\",\n      \"y\" : \"2.6em\"\n    },\n    \".resourceNode-image\" : {\n      \"xlink:href\" : \"/images/aws/vpc/nat-gateway.png\",\n      \"display\" : \"\"\n    },\n    \".count-circle\" : {\n      \"display\" : \"none\"\n    }\n  }\n}, {\n  \"type\" : \"opex.ResourceNode\",\n  \"size\" : {\n    \"width\" : 150,\n    \"height\" : 45\n  },\n  \"packageHeight\" : 25,\n  \"resourceNodeHeight\" : 40,\n  \"paddingBottom\" : 5,\n  \"minWidth\" : 150,\n  \"imageHeight\" : 18,\n  \"inPorts\" : [ ],\n  \"outPorts\" : [ ],\n  \"position\" : {\n    \"x\" : 533,\n    \"y\" : 514\n  },\n  \"angle\" : 0,\n  \"resourceNode\" : \"web_Subnet\",\n  \"resource\" : {\n    \"name\" : \"web_Subnet\",\n    \"resourceName\" : \"aws_subnet\",\n    \"count\" : 1\n  },\n  \"image\" : \"/images/aws/vpc/Networking_AmazonVPCSubnet.png\",\n  \"style\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"type\" : \"linearGradient\",\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ],\n        \"attrs\" : {\n          \"x1\" : \"0%\",\n          \"y1\" : \"0%\",\n          \"x2\" : \"0%\",\n          \"y2\" : \"100%\"\n        }\n      }\n    },\n    \".resourceNode-text\" : {\n      \"fill\" : \"white\"\n    }\n  },\n  \"packages\" : [ ],\n  \"id\" : \"a73a86e8-c791-459f-9b39-992f7d818250\",\n  \"z\" : 19,\n  \"hideDeleteIcons\" : true,\n  \"attrs\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ]\n      }\n    },\n    \".packages\" : {\n      \"ref-y\" : 40\n    },\n    \".count-text\" : {\n      \"text\" : \"1\"\n    },\n    \".delete-resource\" : {\n      \"resourceId\" : 32\n    },\n    \".success-status\" : {\n      \"display\" : \"block\"\n    },\n    \".resourceNode-text\" : {\n      \"text\" : \"web_Subnet\",\n      \"y\" : \"2.6em\"\n    },\n    \".resourceNode-image\" : {\n      \"xlink:href\" : \"/images/aws/vpc/Networking_AmazonVPCSubnet.png\",\n      \"display\" : \"\"\n    },\n    \".count-circle\" : {\n      \"display\" : \"none\"\n    }\n  }\n}, {\n  \"type\" : \"opex.ResourceNode\",\n  \"size\" : {\n    \"width\" : 150,\n    \"height\" : 45\n  },\n  \"packageHeight\" : 25,\n  \"resourceNodeHeight\" : 40,\n  \"paddingBottom\" : 5,\n  \"minWidth\" : 150,\n  \"imageHeight\" : 18,\n  \"inPorts\" : [ ],\n  \"outPorts\" : [ ],\n  \"position\" : {\n    \"x\" : 533,\n    \"y\" : 650\n  },\n  \"angle\" : 0,\n  \"resourceNode\" : \"iELB_Subnet\",\n  \"resource\" : {\n    \"name\" : \"iELB_Subnet\",\n    \"resourceName\" : \"aws_subnet\",\n    \"count\" : 1\n  },\n  \"image\" : \"/images/aws/vpc/Networking_AmazonVPCSubnet.png\",\n  \"style\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"type\" : \"linearGradient\",\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ],\n        \"attrs\" : {\n          \"x1\" : \"0%\",\n          \"y1\" : \"0%\",\n          \"x2\" : \"0%\",\n          \"y2\" : \"100%\"\n        }\n      }\n    },\n    \".resourceNode-text\" : {\n      \"fill\" : \"white\"\n    }\n  },\n  \"packages\" : [ ],\n  \"id\" : \"480d5052-611f-4274-a90c-25d4fab23139\",\n  \"z\" : 26,\n  \"hideDeleteIcons\" : true,\n  \"attrs\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ]\n      }\n    },\n    \".packages\" : {\n      \"ref-y\" : 40\n    },\n    \".count-text\" : {\n      \"text\" : \"1\"\n    },\n    \".delete-resource\" : {\n      \"resourceId\" : 27\n    },\n    \".success-status\" : {\n      \"display\" : \"block\"\n    },\n    \".resourceNode-text\" : {\n      \"text\" : \"iELB_Subnet\",\n      \"y\" : \"2.6em\"\n    },\n    \".resourceNode-image\" : {\n      \"xlink:href\" : \"/images/aws/vpc/Networking_AmazonVPCSubnet.png\",\n      \"display\" : \"\"\n    },\n    \".count-circle\" : {\n      \"display\" : \"none\"\n    }\n  }\n}, {\n  \"type\" : \"opex.ResourceNode\",\n  \"size\" : {\n    \"width\" : 150,\n    \"height\" : 45\n  },\n  \"packageHeight\" : 25,\n  \"resourceNodeHeight\" : 40,\n  \"paddingBottom\" : 5,\n  \"minWidth\" : 150,\n  \"imageHeight\" : 18,\n  \"inPorts\" : [ ],\n  \"outPorts\" : [ ],\n  \"position\" : {\n    \"x\" : 530,\n    \"y\" : 791\n  },\n  \"angle\" : 0,\n  \"resourceNode\" : \"DB_Subnet\",\n  \"resource\" : {\n    \"name\" : \"DB_Subnet\",\n    \"resourceName\" : \"aws_subnet\",\n    \"count\" : 1\n  },\n  \"image\" : \"/images/aws/vpc/Networking_AmazonVPCSubnet.png\",\n  \"style\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"type\" : \"linearGradient\",\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ],\n        \"attrs\" : {\n          \"x1\" : \"0%\",\n          \"y1\" : \"0%\",\n          \"x2\" : \"0%\",\n          \"y2\" : \"100%\"\n        }\n      }\n    },\n    \".resourceNode-text\" : {\n      \"fill\" : \"white\"\n    }\n  },\n  \"packages\" : [ ],\n  \"id\" : \"9d313822-fa1a-4d0c-aced-c2f1d87bf97f\",\n  \"z\" : 34,\n  \"hideDeleteIcons\" : true,\n  \"attrs\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ]\n      }\n    },\n    \".packages\" : {\n      \"ref-y\" : 40\n    },\n    \".count-text\" : {\n      \"text\" : \"1\"\n    },\n    \".delete-resource\" : {\n      \"resourceId\" : 28\n    },\n    \".success-status\" : {\n      \"display\" : \"block\"\n    },\n    \".resourceNode-text\" : {\n      \"text\" : \"DB_Subnet\",\n      \"y\" : \"2.6em\"\n    },\n    \".resourceNode-image\" : {\n      \"xlink:href\" : \"/images/aws/vpc/Networking_AmazonVPCSubnet.png\",\n      \"display\" : \"\"\n    },\n    \".count-circle\" : {\n      \"display\" : \"none\"\n    }\n  }\n}, {\n  \"type\" : \"opex.ResourceNode\",\n  \"size\" : {\n    \"width\" : 150,\n    \"height\" : 45\n  },\n  \"packageHeight\" : 25,\n  \"resourceNodeHeight\" : 40,\n  \"paddingBottom\" : 5,\n  \"minWidth\" : 150,\n  \"imageHeight\" : 18,\n  \"inPorts\" : [ ],\n  \"outPorts\" : [ ],\n  \"position\" : {\n    \"x\" : 11,\n    \"y\" : 471\n  },\n  \"angle\" : 0,\n  \"resourceNode\" : \"Application_VPC_IG\",\n  \"resource\" : {\n    \"name\" : \"Application_VPC_IG\",\n    \"resourceName\" : \"aws_internet_gateway\",\n    \"count\" : 1\n  },\n  \"image\" : \"/images/aws/vpc/Networking_AmazonVPC_internetgateway.png\",\n  \"style\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"type\" : \"linearGradient\",\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ],\n        \"attrs\" : {\n          \"x1\" : \"0%\",\n          \"y1\" : \"0%\",\n          \"x2\" : \"0%\",\n          \"y2\" : \"100%\"\n        }\n      }\n    },\n    \".resourceNode-text\" : {\n      \"fill\" : \"white\"\n    }\n  },\n  \"packages\" : [ ],\n  \"id\" : \"010499d2-7b3f-4c37-8622-6c08deef2804\",\n  \"z\" : 43,\n  \"hideDeleteIcons\" : true,\n  \"attrs\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ]\n      }\n    },\n    \".packages\" : {\n      \"ref-y\" : 40\n    },\n    \".count-text\" : {\n      \"text\" : \"1\"\n    },\n    \".delete-resource\" : {\n      \"resourceId\" : 36\n    },\n    \".success-status\" : {\n      \"display\" : \"block\"\n    },\n    \".resourceNode-text\" : {\n      \"text\" : \"Application_VPC_IG\",\n      \"y\" : \"2.6em\"\n    },\n    \".resourceNode-image\" : {\n      \"xlink:href\" : \"/images/aws/vpc/Networking_AmazonVPC_internetgateway.png\",\n      \"display\" : \"\"\n    },\n    \".count-circle\" : {\n      \"display\" : \"none\"\n    }\n  }\n}, {\n  \"type\" : \"opex.ResourceNode\",\n  \"size\" : {\n    \"width\" : 150,\n    \"height\" : 45\n  },\n  \"packageHeight\" : 25,\n  \"resourceNodeHeight\" : 40,\n  \"paddingBottom\" : 5,\n  \"minWidth\" : 150,\n  \"imageHeight\" : 18,\n  \"inPorts\" : [ ],\n  \"outPorts\" : [ ],\n  \"position\" : {\n    \"x\" : 97,\n    \"y\" : 89\n  },\n  \"angle\" : 0,\n  \"resourceNode\" : \"public_route_table\",\n  \"resource\" : {\n    \"name\" : \"public_route_table\",\n    \"resourceName\" : \"aws_route_table\",\n    \"count\" : 1\n  },\n  \"image\" : \"/images/aws/vpc/Networking_AmazonRoute53_routetable.png\",\n  \"style\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"type\" : \"linearGradient\",\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ],\n        \"attrs\" : {\n          \"x1\" : \"0%\",\n          \"y1\" : \"0%\",\n          \"x2\" : \"0%\",\n          \"y2\" : \"100%\"\n        }\n      }\n    },\n    \".resourceNode-text\" : {\n      \"fill\" : \"white\"\n    }\n  },\n  \"packages\" : [ ],\n  \"id\" : \"df2403b6-ed37-4598-9813-d1d360dd854d\",\n  \"z\" : 52,\n  \"hideDeleteIcons\" : true,\n  \"attrs\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ]\n      }\n    },\n    \".packages\" : {\n      \"ref-y\" : 40\n    },\n    \".count-text\" : {\n      \"text\" : \"1\"\n    },\n    \".delete-resource\" : {\n      \"resourceId\" : 31\n    },\n    \".success-status\" : {\n      \"display\" : \"block\"\n    },\n    \".resourceNode-text\" : {\n      \"text\" : \"public_route_table\",\n      \"y\" : \"2.6em\"\n    },\n    \".resourceNode-image\" : {\n      \"xlink:href\" : \"/images/aws/vpc/Networking_AmazonRoute53_routetable.png\",\n      \"display\" : \"\"\n    },\n    \".count-circle\" : {\n      \"display\" : \"none\"\n    }\n  }\n}, {\n  \"type\" : \"opex.ResourceNode\",\n  \"size\" : {\n    \"width\" : 150,\n    \"height\" : 45\n  },\n  \"packageHeight\" : 25,\n  \"resourceNodeHeight\" : 40,\n  \"paddingBottom\" : 5,\n  \"minWidth\" : 150,\n  \"imageHeight\" : 18,\n  \"inPorts\" : [ ],\n  \"outPorts\" : [ ],\n  \"position\" : {\n    \"x\" : 654,\n    \"y\" : 85\n  },\n  \"angle\" : 0,\n  \"resourceNode\" : \"private_route_table\",\n  \"resource\" : {\n    \"name\" : \"private_route_table\",\n    \"resourceName\" : \"aws_route_table\",\n    \"count\" : 1\n  },\n  \"image\" : \"/images/aws/vpc/Networking_AmazonRoute53_routetable.png\",\n  \"style\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"type\" : \"linearGradient\",\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ],\n        \"attrs\" : {\n          \"x1\" : \"0%\",\n          \"y1\" : \"0%\",\n          \"x2\" : \"0%\",\n          \"y2\" : \"100%\"\n        }\n      }\n    },\n    \".resourceNode-text\" : {\n      \"fill\" : \"white\"\n    }\n  },\n  \"packages\" : [ ],\n  \"id\" : \"5ed5d4d5-37bd-410e-818e-ef04ab47a32a\",\n  \"z\" : 63,\n  \"hideDeleteIcons\" : true,\n  \"attrs\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ]\n      }\n    },\n    \".packages\" : {\n      \"ref-y\" : 40\n    },\n    \".count-text\" : {\n      \"text\" : \"1\"\n    },\n    \".delete-resource\" : {\n      \"resourceId\" : 26\n    },\n    \".success-status\" : {\n      \"display\" : \"block\"\n    },\n    \".resourceNode-text\" : {\n      \"text\" : \"private_route_table\",\n      \"y\" : \"2.6em\"\n    },\n    \".resourceNode-image\" : {\n      \"xlink:href\" : \"/images/aws/vpc/Networking_AmazonRoute53_routetable.png\",\n      \"display\" : \"\"\n    },\n    \".count-circle\" : {\n      \"display\" : \"none\"\n    }\n  }\n}, {\n  \"type\" : \"opex.ResourceNode\",\n  \"size\" : {\n    \"width\" : 150,\n    \"height\" : 45\n  },\n  \"packageHeight\" : 25,\n  \"resourceNodeHeight\" : 40,\n  \"paddingBottom\" : 5,\n  \"minWidth\" : 150,\n  \"imageHeight\" : 18,\n  \"inPorts\" : [ ],\n  \"outPorts\" : [ ],\n  \"position\" : {\n    \"x\" : 872,\n    \"y\" : 95\n  },\n  \"angle\" : 0,\n  \"resourceNode\" : \"xELB_EIP\",\n  \"resource\" : {\n    \"name\" : \"xELB_EIP\",\n    \"resourceName\" : \"aws_eip\",\n    \"count\" : 1\n  },\n  \"image\" : \"/images/aws/ec2/Compute_AmazonEC2_ElasticIP.png\",\n  \"style\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"type\" : \"linearGradient\",\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ],\n        \"attrs\" : {\n          \"x1\" : \"0%\",\n          \"y1\" : \"0%\",\n          \"x2\" : \"0%\",\n          \"y2\" : \"100%\"\n        }\n      }\n    },\n    \".resourceNode-text\" : {\n      \"fill\" : \"white\"\n    }\n  },\n  \"packages\" : [ ],\n  \"id\" : \"5148b486-e47b-4cef-bfab-8d5494fbc6cd\",\n  \"z\" : 75,\n  \"hideDeleteIcons\" : true,\n  \"attrs\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ]\n      }\n    },\n    \".packages\" : {\n      \"ref-y\" : 40\n    },\n    \".count-text\" : {\n      \"text\" : \"1\"\n    },\n    \".delete-resource\" : {\n      \"resourceId\" : 34\n    },\n    \".success-status\" : {\n      \"display\" : \"block\"\n    },\n    \".resourceNode-text\" : {\n      \"text\" : \"xELB_EIP\",\n      \"y\" : \"2.6em\"\n    },\n    \".resourceNode-image\" : {\n      \"xlink:href\" : \"/images/aws/ec2/Compute_AmazonEC2_ElasticIP.png\",\n      \"display\" : \"\"\n    },\n    \".count-circle\" : {\n      \"display\" : \"none\"\n    }\n  }\n}, {\n  \"type\" : \"opex.ResourceNode\",\n  \"size\" : {\n    \"width\" : 192.25390625,\n    \"height\" : 45\n  },\n  \"packageHeight\" : 25,\n  \"resourceNodeHeight\" : 40,\n  \"paddingBottom\" : 5,\n  \"minWidth\" : 150,\n  \"imageHeight\" : 18,\n  \"inPorts\" : [ ],\n  \"outPorts\" : [ ],\n  \"position\" : {\n    \"x\" : 319,\n    \"y\" : 55\n  },\n  \"angle\" : 0,\n  \"resourceNode\" : \"App_subnet_route_association\",\n  \"resource\" : {\n    \"name\" : \"App_subnet_route_association\",\n    \"resourceName\" : \"aws_route_table_association\",\n    \"count\" : 1\n  },\n  \"image\" : \"/images/aws/vpc/Networking_AmazonRoute53_routetable.png\",\n  \"style\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"type\" : \"linearGradient\",\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ],\n        \"attrs\" : {\n          \"x1\" : \"0%\",\n          \"y1\" : \"0%\",\n          \"x2\" : \"0%\",\n          \"y2\" : \"100%\"\n        }\n      }\n    },\n    \".resourceNode-text\" : {\n      \"fill\" : \"white\"\n    }\n  },\n  \"packages\" : [ ],\n  \"id\" : \"f3056c7c-7548-4826-9d17-bea20625fe01\",\n  \"z\" : 88,\n  \"hideDeleteIcons\" : true,\n  \"attrs\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ]\n      }\n    },\n    \".packages\" : {\n      \"ref-y\" : 40\n    },\n    \".count-text\" : {\n      \"text\" : \"1\"\n    },\n    \".delete-resource\" : {\n      \"resourceId\" : 41\n    },\n    \".success-status\" : {\n      \"display\" : \"block\"\n    },\n    \".resourceNode-text\" : {\n      \"text\" : \"App_subnet_route_association\",\n      \"y\" : \"2.6em\"\n    },\n    \".resourceNode-image\" : {\n      \"xlink:href\" : \"/images/aws/vpc/Networking_AmazonRoute53_routetable.png\",\n      \"display\" : \"\"\n    },\n    \".count-circle\" : {\n      \"display\" : \"none\"\n    }\n  }\n}, {\n  \"type\" : \"opex.ResourceNode\",\n  \"size\" : {\n    \"width\" : 200.8056640625,\n    \"height\" : 45\n  },\n  \"packageHeight\" : 25,\n  \"resourceNodeHeight\" : 40,\n  \"paddingBottom\" : 5,\n  \"minWidth\" : 150,\n  \"imageHeight\" : 18,\n  \"inPorts\" : [ ],\n  \"outPorts\" : [ ],\n  \"position\" : {\n    \"x\" : 264,\n    \"y\" : 281\n  },\n  \"angle\" : 0,\n  \"resourceNode\" : \"xELB_subnet_route_association\",\n  \"resource\" : {\n    \"name\" : \"xELB_subnet_route_association\",\n    \"resourceName\" : \"aws_route_table_association\",\n    \"count\" : 1\n  },\n  \"image\" : \"/images/aws/vpc/Networking_AmazonRoute53_routetable.png\",\n  \"style\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"type\" : \"linearGradient\",\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ],\n        \"attrs\" : {\n          \"x1\" : \"0%\",\n          \"y1\" : \"0%\",\n          \"x2\" : \"0%\",\n          \"y2\" : \"100%\"\n        }\n      }\n    },\n    \".resourceNode-text\" : {\n      \"fill\" : \"white\"\n    }\n  },\n  \"packages\" : [ ],\n  \"id\" : \"75f7125d-061a-4159-90aa-8f0b0b4d7155\",\n  \"z\" : 103,\n  \"hideDeleteIcons\" : true,\n  \"attrs\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ]\n      }\n    },\n    \".packages\" : {\n      \"ref-y\" : 40\n    },\n    \".count-text\" : {\n      \"text\" : \"1\"\n    },\n    \".delete-resource\" : {\n      \"resourceId\" : 33\n    },\n    \".success-status\" : {\n      \"display\" : \"block\"\n    },\n    \".resourceNode-text\" : {\n      \"text\" : \"xELB_subnet_route_association\",\n      \"y\" : \"2.6em\"\n    },\n    \".resourceNode-image\" : {\n      \"xlink:href\" : \"/images/aws/vpc/Networking_AmazonRoute53_routetable.png\",\n      \"display\" : \"\"\n    },\n    \".count-circle\" : {\n      \"display\" : \"none\"\n    }\n  }\n}, {\n  \"type\" : \"opex.ResourceNode\",\n  \"size\" : {\n    \"width\" : 231.1708984375,\n    \"height\" : 45\n  },\n  \"packageHeight\" : 25,\n  \"resourceNodeHeight\" : 40,\n  \"paddingBottom\" : 5,\n  \"minWidth\" : 150,\n  \"imageHeight\" : 18,\n  \"inPorts\" : [ ],\n  \"outPorts\" : [ ],\n  \"position\" : {\n    \"x\" : 814,\n    \"y\" : 529\n  },\n  \"angle\" : 0,\n  \"resourceNode\" : \"web_subnet_route_table_association\",\n  \"resource\" : {\n    \"name\" : \"web_subnet_route_table_association\",\n    \"resourceName\" : \"aws_route_table_association\",\n    \"count\" : 1\n  },\n  \"image\" : \"/images/aws/vpc/Networking_AmazonRoute53_routetable.png\",\n  \"style\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"type\" : \"linearGradient\",\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ],\n        \"attrs\" : {\n          \"x1\" : \"0%\",\n          \"y1\" : \"0%\",\n          \"x2\" : \"0%\",\n          \"y2\" : \"100%\"\n        }\n      }\n    },\n    \".resourceNode-text\" : {\n      \"fill\" : \"white\"\n    }\n  },\n  \"packages\" : [ ],\n  \"id\" : \"9d798a8e-dfb0-4369-b1a3-3ee416972b58\",\n  \"z\" : 120,\n  \"hideDeleteIcons\" : true,\n  \"attrs\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ]\n      }\n    },\n    \".packages\" : {\n      \"ref-y\" : 40\n    },\n    \".count-text\" : {\n      \"text\" : \"1\"\n    },\n    \".delete-resource\" : {\n      \"resourceId\" : 25\n    },\n    \".success-status\" : {\n      \"display\" : \"block\"\n    },\n    \".resourceNode-text\" : {\n      \"text\" : \"web_subnet_route_table_association\",\n      \"y\" : \"2.6em\"\n    },\n    \".resourceNode-image\" : {\n      \"xlink:href\" : \"/images/aws/vpc/Networking_AmazonRoute53_routetable.png\",\n      \"display\" : \"\"\n    },\n    \".count-circle\" : {\n      \"display\" : \"none\"\n    }\n  }\n}, {\n  \"type\" : \"opex.ResourceNode\",\n  \"size\" : {\n    \"width\" : 235.060546875,\n    \"height\" : 45\n  },\n  \"packageHeight\" : 25,\n  \"resourceNodeHeight\" : 40,\n  \"paddingBottom\" : 5,\n  \"minWidth\" : 150,\n  \"imageHeight\" : 18,\n  \"inPorts\" : [ ],\n  \"outPorts\" : [ ],\n  \"position\" : {\n    \"x\" : 788,\n    \"y\" : 662\n  },\n  \"angle\" : 0,\n  \"resourceNode\" : \"iELB_subnet_route_table_association\",\n  \"resource\" : {\n    \"name\" : \"iELB_subnet_route_table_association\",\n    \"resourceName\" : \"aws_route_table_association\",\n    \"count\" : 1\n  },\n  \"image\" : \"/images/aws/vpc/Networking_AmazonRoute53_routetable.png\",\n  \"style\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"type\" : \"linearGradient\",\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ],\n        \"attrs\" : {\n          \"x1\" : \"0%\",\n          \"y1\" : \"0%\",\n          \"x2\" : \"0%\",\n          \"y2\" : \"100%\"\n        }\n      }\n    },\n    \".resourceNode-text\" : {\n      \"fill\" : \"white\"\n    }\n  },\n  \"packages\" : [ ],\n  \"id\" : \"21cbac2f-f6b4-4da4-9923-8c2b23647813\",\n  \"z\" : 139,\n  \"hideDeleteIcons\" : true,\n  \"attrs\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ]\n      }\n    },\n    \".packages\" : {\n      \"ref-y\" : 40\n    },\n    \".count-text\" : {\n      \"text\" : \"1\"\n    },\n    \".delete-resource\" : {\n      \"resourceId\" : 38\n    },\n    \".success-status\" : {\n      \"display\" : \"block\"\n    },\n    \".resourceNode-text\" : {\n      \"text\" : \"iELB_subnet_route_table_association\",\n      \"y\" : \"2.6em\"\n    },\n    \".resourceNode-image\" : {\n      \"xlink:href\" : \"/images/aws/vpc/Networking_AmazonRoute53_routetable.png\",\n      \"display\" : \"\"\n    },\n    \".count-circle\" : {\n      \"display\" : \"none\"\n    }\n  }\n}, {\n  \"type\" : \"opex.ResourceNode\",\n  \"size\" : {\n    \"width\" : 224.9365234375,\n    \"height\" : 45\n  },\n  \"packageHeight\" : 25,\n  \"resourceNodeHeight\" : 40,\n  \"paddingBottom\" : 5,\n  \"minWidth\" : 150,\n  \"imageHeight\" : 18,\n  \"inPorts\" : [ ],\n  \"outPorts\" : [ ],\n  \"position\" : {\n    \"x\" : 774,\n    \"y\" : 798\n  },\n  \"angle\" : 0,\n  \"resourceNode\" : \"DB_subnet_route_table_association\",\n  \"resource\" : {\n    \"name\" : \"DB_subnet_route_table_association\",\n    \"resourceName\" : \"aws_route_table_association\",\n    \"count\" : 1\n  },\n  \"image\" : \"/images/aws/vpc/Networking_AmazonRoute53_routetable.png\",\n  \"style\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"type\" : \"linearGradient\",\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ],\n        \"attrs\" : {\n          \"x1\" : \"0%\",\n          \"y1\" : \"0%\",\n          \"x2\" : \"0%\",\n          \"y2\" : \"100%\"\n        }\n      }\n    },\n    \".resourceNode-text\" : {\n      \"fill\" : \"white\"\n    }\n  },\n  \"packages\" : [ ],\n  \"id\" : \"c6a02467-5fbd-4dc5-b1ca-ba5f4285854d\",\n  \"z\" : 160,\n  \"hideDeleteIcons\" : true,\n  \"attrs\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ]\n      }\n    },\n    \".packages\" : {\n      \"ref-y\" : 40\n    },\n    \".count-text\" : {\n      \"text\" : \"1\"\n    },\n    \".delete-resource\" : {\n      \"resourceId\" : 24\n    },\n    \".success-status\" : {\n      \"display\" : \"block\"\n    },\n    \".resourceNode-text\" : {\n      \"text\" : \"DB_subnet_route_table_association\",\n      \"y\" : \"2.6em\"\n    },\n    \".resourceNode-image\" : {\n      \"xlink:href\" : \"/images/aws/vpc/Networking_AmazonRoute53_routetable.png\",\n      \"display\" : \"\"\n    },\n    \".count-circle\" : {\n      \"display\" : \"none\"\n    }\n  }\n}, {\n  \"type\" : \"opex.ResourceNode\",\n  \"size\" : {\n    \"width\" : 150,\n    \"height\" : 45\n  },\n  \"packageHeight\" : 25,\n  \"resourceNodeHeight\" : 40,\n  \"paddingBottom\" : 5,\n  \"minWidth\" : 150,\n  \"imageHeight\" : 18,\n  \"inPorts\" : [ ],\n  \"outPorts\" : [ ],\n  \"position\" : {\n    \"x\" : 156,\n    \"y\" : 800\n  },\n  \"angle\" : 0,\n  \"resourceNode\" : \"Output\",\n  \"resource\" : {\n    \"name\" : \"Output\",\n    \"resourceName\" : \"output\",\n    \"count\" : 1\n  },\n  \"image\" : \"/images/variable.png\",\n  \"style\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"type\" : \"linearGradient\",\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ],\n        \"attrs\" : {\n          \"x1\" : \"0%\",\n          \"y1\" : \"0%\",\n          \"x2\" : \"0%\",\n          \"y2\" : \"100%\"\n        }\n      }\n    },\n    \".resourceNode-text\" : {\n      \"fill\" : \"white\"\n    }\n  },\n  \"packages\" : [ ],\n  \"id\" : \"b2e80cfe-4c24-41f1-a543-804116bb912f\",\n  \"z\" : 183,\n  \"hideDeleteIcons\" : true,\n  \"attrs\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ]\n      }\n    },\n    \".packages\" : {\n      \"ref-y\" : 40\n    },\n    \".count-text\" : {\n      \"text\" : \"1\"\n    },\n    \".delete-resource\" : {\n      \"resourceId\" : 35\n    },\n    \".success-status\" : {\n      \"display\" : \"block\"\n    },\n    \".resourceNode-text\" : {\n      \"text\" : \"Output\",\n      \"y\" : \"2.6em\"\n    },\n    \".resourceNode-image\" : {\n      \"xlink:href\" : \"/images/variable.png\",\n      \"display\" : \"\"\n    },\n    \".count-circle\" : {\n      \"display\" : \"none\"\n    }\n  }\n} ]",
+  "providerName": "AWS_Automated_Provider",
+  "connectionName": "DummyConnection",
+  "connectionType": "SSH",
+  "providerType": "aws",
+  "preDeployScript": null,
+  "postDeployScript": null,
+  "preDestroyScript": null,
+  "postDestroyScript": null,
+  "exportedByEmail": "admin@yourcompany.com",
+  "exportedOn": 1483114532115,
+  "description": "REAN standard 5 layer architecture.",
+  "name": "MyNew-5Layer-VPC",
+  "resources": [
+    {
+      "connectionName": null,
+      "connectionType": null,
+      "dependsOn": null,
+      "resourceName": "aws_subnet",
+      "name": "Application_Subnet",
+      "packages": null,
+      "attributes": {
+        "cidr_block": "10.0.1.0/24",
+        "availability_zone": null,
+        "map_public_ip_on_launch": "false",
+        "vpc_id": "${Application_VPC.id}"
+      }
+    },
+    {
+      "connectionName": null,
+      "connectionType": null,
+      "dependsOn": null,
+      "resourceName": "aws_elb",
+      "name": "xELB",
+      "packages": null,
+      "attributes": {
+        "access_logs": null,
+        "name": "xELB",
+        "listener": "{\"instance_port\":8000,\"instance_protocol\":\"http\",\"lb_port\":80,\"lb_protocol\":\"http\"}",
+        "instances": null,
+        "internal": "false",
+        "health_check": null,
+        "security_groups": null,
+        "subnets": "${xELB_Subnet.id}",
+        "cross_zone_load_balancing": "true",
+        "idle_timeout": "60"
+      }
+    },
+    {
+      "connectionName": null,
+      "connectionType": null,
+      "dependsOn": null,
+      "resourceName": "aws_eip",
+      "name": "xELB_EIP",
+      "packages": null,
+      "attributes": {
+        "network_interface": null,
+        "associate_with_private_ip": null,
+        "vpc": "true",
+        "instance": null
+      }
+    },
+    {
+      "connectionName": null,
+      "connectionType": null,
+      "dependsOn": null,
+      "resourceName": "aws_route_table",
+      "name": "private_route_table",
+      "packages": null,
+      "attributes": {
+        "route": "[{\"cidr_block\":\"0.0.0.0/0\",\"gateway_id\":\"${xELB_NAT_Gateway.id}\"}]",
+        "propagating_vgws": null,
+        "vpc_id": "${Application_VPC.id}"
+      }
+    },
+    {
+      "connectionName": null,
+      "connectionType": null,
+      "dependsOn": null,
+      "resourceName": "aws_route_table_association",
+      "name": "DB_subnet_route_table_association",
+      "packages": null,
+      "attributes": {
+        "subnet_id": "${DB_Subnet.id}",
+        "route_table_id": "${private_route_table.id}"
+      }
+    },
+    {
+      "connectionName": null,
+      "connectionType": null,
+      "dependsOn": null,
+      "resourceName": "aws_route_table_association",
+      "name": "xELB_subnet_route_association",
+      "packages": null,
+      "attributes": {
+        "subnet_id": "${xELB_Subnet.id}",
+        "route_table_id": "${public_route_table.id}"
+      }
+    },
+    {
+      "connectionName": null,
+      "connectionType": null,
+      "dependsOn": null,
+      "resourceName": "aws_subnet",
+      "name": "iELB_Subnet",
+      "packages": null,
+      "attributes": {
+        "cidr_block": "10.0.4.0/24",
+        "availability_zone": null,
+        "map_public_ip_on_launch": "false",
+        "vpc_id": "${Application_VPC.id}"
+      }
+    },
+    {
+      "connectionName": null,
+      "connectionType": null,
+      "dependsOn": null,
+      "resourceName": "aws_nat_gateway",
+      "name": "xELB_NAT_Gateway",
+      "packages": null,
+      "attributes": {
+        "subnet_id": "${xELB_Subnet.id}",
+        "allocation_id": "${xELB_EIP.id}",
+        "private_ip": null,
+        "network_interface_id": null,
+        "public_ip": null
+      }
+    },
+    {
+      "connectionName": null,
+      "connectionType": null,
+      "dependsOn": null,
+      "resourceName": "aws_subnet",
+      "name": "DB_Subnet",
+      "packages": null,
+      "attributes": {
+        "cidr_block": "10.0.5.0/24",
+        "availability_zone": null,
+        "map_public_ip_on_launch": "false",
+        "vpc_id": "${Application_VPC.id}"
+      }
+    },
+    {
+      "connectionName": null,
+      "connectionType": null,
+      "dependsOn": null,
+      "resourceName": "aws_subnet",
+      "name": "web_Subnet",
+      "packages": null,
+      "attributes": {
+        "cidr_block": "10.0.3.0/24",
+        "availability_zone": null,
+        "map_public_ip_on_launch": "false",
+        "vpc_id": "${Application_VPC.id}"
+      }
+    },
+    {
+      "connectionName": null,
+      "connectionType": null,
+      "dependsOn": null,
+      "resourceName": "output",
+      "name": "Output",
+      "packages": null,
+      "attributes": {
+        "output": "{\"application_vpc_id\":{\"value\":\"${ aws_vpc.Application_VPC.id }\"},\"application_ig_id\":{\"value\":\"${ aws_internet_gateway.Application_VPC_IG.id }\"},\"application_subnet_id\":{\"value\":\"${ aws_subnet.Application_Subnet.id }\"},\"xELB_subnet_id\":{\"value\":\"${ aws_subnet.xELB_Subnet.id }\"},\"web_subnet_id\":{\"value\":\"${ aws_subnet.web_Subnet.id }\"},\"iELB_Subnet_id\":{\"value\":\"${ aws_subnet.iELB_Subnet.id }\"},\"DB_Subnet_id\":{\"value\":\"${ aws_subnet.DB_Subnet.id }\"},\"EIP_id\":{\"value\":\"${ aws_eip.xELB_EIP.id }\"},\"xELB_NAT_gateway\":{\"value\":\"${ aws_nat_gateway.xELB_NAT_Gateway.id }\"}}"
+      }
+    },
+    {
+      "connectionName": null,
+      "connectionType": null,
+      "dependsOn": null,
+      "resourceName": "aws_internet_gateway",
+      "name": "Application_VPC_IG",
+      "packages": null,
+      "attributes": {
+        "vpc_id": "${Application_VPC.id}"
+      }
+    },
+    {
+      "connectionName": null,
+      "connectionType": null,
+      "dependsOn": null,
+      "resourceName": "aws_route_table_association",
+      "name": "App_subnet_route_association",
+      "packages": null,
+      "attributes": {
+        "subnet_id": "${Application_Subnet.id}",
+        "route_table_id": "${private_route_table.id}"
+      }
+    },
+    {
+      "connectionName": null,
+      "connectionType": null,
+      "dependsOn": null,
+      "resourceName": "aws_route_table_association",
+      "name": "web_subnet_route_table_association",
+      "packages": null,
+      "attributes": {
+        "subnet_id": "${web_Subnet.id}",
+        "route_table_id": "${private_route_table.id}"
+      }
+    },
+    {
+      "connectionName": null,
+      "connectionType": null,
+      "dependsOn": null,
+      "resourceName": "aws_vpc",
+      "name": "Application_VPC",
+      "packages": null,
+      "attributes": {
+        "cidr_block": "10.0.0.0/16",
+        "enable_dns_hostnames": null,
+        "enable_dns_support": null,
+        "enable_classiclink": null,
+        "instance_tenancy": null
+      }
+    },
+    {
+      "connectionName": null,
+      "connectionType": null,
+      "dependsOn": null,
+      "resourceName": "aws_route_table",
+      "name": "public_route_table",
+      "packages": null,
+      "attributes": {
+        "route": "[{\"cidr_block\":\"0.0.0.0/0\",\"gateway_id\":\"${Application_VPC_IG.id}\"}]",
+        "propagating_vgws": null,
+        "vpc_id": "${Application_VPC.id}"
+      }
+    },
+    {
+      "connectionName": null,
+      "connectionType": null,
+      "dependsOn": null,
+      "resourceName": "aws_subnet",
+      "name": "xELB_Subnet",
+      "packages": null,
+      "attributes": {
+        "cidr_block": "10.0.2.0/24",
+        "availability_zone": null,
+        "map_public_ip_on_launch": "true",
+        "vpc_id": "${Application_VPC.id}"
+      }
+    },
+    {
+      "connectionName": null,
+      "connectionType": null,
+      "dependsOn": null,
+      "resourceName": "aws_route_table_association",
+      "name": "iELB_subnet_route_table_association",
+      "packages": null,
+      "attributes": {
+        "subnet_id": "${iELB_Subnet.id}",
+        "route_table_id": "${private_route_table.id}"
+      }
+    }
+  ],
+  "location": null,
+  "type": null
+}

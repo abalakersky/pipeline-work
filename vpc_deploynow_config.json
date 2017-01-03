@@ -1,0 +1,8 @@
+{
+  "Parameters" : {
+    "InstanceType" : "t2.micro",
+    "KeyName" : "alex.balakersky.key",
+    "DeployNowURL" : "s3://alex.balakersky.test/deploynow.deb",
+    "SSHLocation" : "184.191.212.25/32"
+  }
+}

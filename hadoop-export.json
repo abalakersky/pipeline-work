@@ -1,0 +1,140 @@
+{
+  "layout": "[ {\n  \"type\" : \"opex.ResourceNode\",\n  \"size\" : {\n    \"width\" : 150,\n    \"height\" : 70\n  },\n  \"packageHeight\" : 25,\n  \"resourceNodeHeight\" : 40,\n  \"paddingBottom\" : 5,\n  \"minWidth\" : 150,\n  \"imageHeight\" : 18,\n  \"inPorts\" : [ ],\n  \"outPorts\" : [ ],\n  \"position\" : {\n    \"x\" : 288,\n    \"y\" : 57\n  },\n  \"angle\" : 0,\n  \"resourceNode\" : \"NameNode\",\n  \"resource\" : {\n    \"name\" : \"NameNode\",\n    \"resourceName\" : \"aws_instance\"\n  },\n  \"image\" : \"/images/aws/ec2/Compute_AmazonEC2_instance.png\",\n  \"style\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"type\" : \"linearGradient\",\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ],\n        \"attrs\" : {\n          \"x1\" : \"0%\",\n          \"y1\" : \"0%\",\n          \"x2\" : \"0%\",\n          \"y2\" : \"100%\"\n        }\n      }\n    },\n    \".resourceNode-text\" : {\n      \"fill\" : \"white\"\n    }\n  },\n  \"packages\" : [ {\n    \"packageName\" : \"hadoop-namenode\"\n  } ],\n  \"id\" : \"8f523714-220f-4fc0-96d3-a6a39b5abf87\",\n  \"z\" : 1,\n  \"hideDeleteIcons\" : false,\n  \"attrs\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ]\n      }\n    },\n    \".packages\" : {\n      \"ref-y\" : 40\n    },\n    \".delete-resource\" : {\n      \"resourceId\" : 78\n    },\n    \".success-status\" : {\n      \"display\" : \"block\"\n    },\n    \".resourceNode-text\" : {\n      \"text\" : \"NameNode\",\n      \"y\" : \"2.6em\"\n    },\n    \".resourceNode-image\" : {\n      \"xlink:href\" : \"/images/aws/ec2/Compute_AmazonEC2_instance.png\",\n      \"display\" : \"\"\n    },\n    \".package-40\" : {\n      \"transform\" : \"translate(0, 0)\",\n      \"dynamic\" : true\n    },\n    \".package-40 .package-rect\" : {\n      \"height\" : 25,\n      \"dynamic\" : true\n    },\n    \".package-40 .package-port .port-body\" : {\n      \"port\" : 40,\n      \"dynamic\" : true\n    },\n    \".package-40 .package-text\" : {\n      \"text\" : \"hadoop-namenode\",\n      \"dynamic\" : true\n    },\n    \".package-40 .package-delete\" : {\n      \"packageId\" : 40,\n      \"dynamic\" : true\n    }\n  }\n}, {\n  \"type\" : \"opex.ResourceNode\",\n  \"size\" : {\n    \"width\" : 150,\n    \"height\" : 70\n  },\n  \"packageHeight\" : 25,\n  \"resourceNodeHeight\" : 40,\n  \"paddingBottom\" : 5,\n  \"minWidth\" : 150,\n  \"imageHeight\" : 18,\n  \"inPorts\" : [ ],\n  \"outPorts\" : [ ],\n  \"position\" : {\n    \"x\" : 525,\n    \"y\" : 213\n  },\n  \"angle\" : 0,\n  \"resourceNode\" : \"DataNode2\",\n  \"resource\" : {\n    \"name\" : \"DataNode2\",\n    \"resourceName\" : \"aws_instance\"\n  },\n  \"image\" : \"/images/aws/ec2/Compute_AmazonEC2_instance.png\",\n  \"style\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"type\" : \"linearGradient\",\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ],\n        \"attrs\" : {\n          \"x1\" : \"0%\",\n          \"y1\" : \"0%\",\n          \"x2\" : \"0%\",\n          \"y2\" : \"100%\"\n        }\n      }\n    },\n    \".resourceNode-text\" : {\n      \"fill\" : \"white\"\n    }\n  },\n  \"packages\" : [ {\n    \"packageName\" : \"hadoop-datanode\"\n  } ],\n  \"id\" : \"e97ccc63-ca77-4d57-9b3a-b50f9afd36b3\",\n  \"z\" : 3,\n  \"hideDeleteIcons\" : false,\n  \"attrs\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ]\n      }\n    },\n    \".packages\" : {\n      \"ref-y\" : 40\n    },\n    \".delete-resource\" : {\n      \"resourceId\" : 76\n    },\n    \".success-status\" : {\n      \"display\" : \"block\"\n    },\n    \".resourceNode-text\" : {\n      \"text\" : \"DataNode2\",\n      \"y\" : \"2.6em\"\n    },\n    \".resourceNode-image\" : {\n      \"xlink:href\" : \"/images/aws/ec2/Compute_AmazonEC2_instance.png\",\n      \"display\" : \"\"\n    },\n    \".package-39\" : {\n      \"transform\" : \"translate(0, 0)\",\n      \"dynamic\" : true\n    },\n    \".package-39 .package-rect\" : {\n      \"height\" : 25,\n      \"dynamic\" : true\n    },\n    \".package-39 .package-port .port-body\" : {\n      \"port\" : 39,\n      \"dynamic\" : true\n    },\n    \".package-39 .package-text\" : {\n      \"text\" : \"hadoop-datanode\",\n      \"dynamic\" : true\n    },\n    \".package-39 .package-delete\" : {\n      \"packageId\" : 39,\n      \"dynamic\" : true\n    }\n  }\n}, {\n  \"type\" : \"opex.ResourceNode\",\n  \"size\" : {\n    \"width\" : 150,\n    \"height\" : 70\n  },\n  \"packageHeight\" : 25,\n  \"resourceNodeHeight\" : 40,\n  \"paddingBottom\" : 5,\n  \"minWidth\" : 150,\n  \"imageHeight\" : 18,\n  \"inPorts\" : [ ],\n  \"outPorts\" : [ ],\n  \"position\" : {\n    \"x\" : 104,\n    \"y\" : 204\n  },\n  \"angle\" : 0,\n  \"resourceNode\" : \"DataNode1\",\n  \"resource\" : {\n    \"name\" : \"DataNode1\",\n    \"resourceName\" : \"aws_instance\"\n  },\n  \"image\" : \"/images/aws/ec2/Compute_AmazonEC2_instance.png\",\n  \"style\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"type\" : \"linearGradient\",\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ],\n        \"attrs\" : {\n          \"x1\" : \"0%\",\n          \"y1\" : \"0%\",\n          \"x2\" : \"0%\",\n          \"y2\" : \"100%\"\n        }\n      }\n    },\n    \".resourceNode-text\" : {\n      \"fill\" : \"white\"\n    }\n  },\n  \"packages\" : [ {\n    \"packageName\" : \"hadoop-datanode\"\n  } ],\n  \"id\" : \"a97aa085-b3ad-4c20-8fee-fcb41dd06de7\",\n  \"z\" : 4,\n  \"hideDeleteIcons\" : false,\n  \"attrs\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ]\n      }\n    },\n    \".packages\" : {\n      \"ref-y\" : 40\n    },\n    \".delete-resource\" : {\n      \"resourceId\" : 79\n    },\n    \".success-status\" : {\n      \"display\" : \"block\"\n    },\n    \".resourceNode-text\" : {\n      \"text\" : \"DataNode1\",\n      \"y\" : \"2.6em\"\n    },\n    \".resourceNode-image\" : {\n      \"xlink:href\" : \"/images/aws/ec2/Compute_AmazonEC2_instance.png\",\n      \"display\" : \"\"\n    },\n    \".package-41\" : {\n      \"transform\" : \"translate(0, 0)\",\n      \"dynamic\" : true\n    },\n    \".package-41 .package-rect\" : {\n      \"height\" : 25,\n      \"dynamic\" : true\n    },\n    \".package-41 .package-port .port-body\" : {\n      \"port\" : 41,\n      \"dynamic\" : true\n    },\n    \".package-41 .package-text\" : {\n      \"text\" : \"hadoop-datanode\",\n      \"dynamic\" : true\n    },\n    \".package-41 .package-delete\" : {\n      \"packageId\" : 41,\n      \"dynamic\" : true\n    }\n  }\n}, {\n  \"type\" : \"opex.ResourceNode\",\n  \"size\" : {\n    \"width\" : 150,\n    \"height\" : 45\n  },\n  \"packageHeight\" : 25,\n  \"resourceNodeHeight\" : 40,\n  \"paddingBottom\" : 5,\n  \"minWidth\" : 150,\n  \"imageHeight\" : 18,\n  \"inPorts\" : [ ],\n  \"outPorts\" : [ ],\n  \"position\" : {\n    \"x\" : 532,\n    \"y\" : 72\n  },\n  \"angle\" : 0,\n  \"resourceNode\" : \"NameNodeSG\",\n  \"resource\" : {\n    \"name\" : \"NameNodeSG\",\n    \"resourceName\" : \"aws_security_group\"\n  },\n  \"image\" : \"/images/aws/aws.png\",\n  \"style\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"type\" : \"linearGradient\",\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ],\n        \"attrs\" : {\n          \"x1\" : \"0%\",\n          \"y1\" : \"0%\",\n          \"x2\" : \"0%\",\n          \"y2\" : \"100%\"\n        }\n      }\n    },\n    \".resourceNode-text\" : {\n      \"fill\" : \"white\"\n    }\n  },\n  \"packages\" : [ ],\n  \"id\" : \"6fd96845-7acf-45af-b19f-2d3a5ca940be\",\n  \"z\" : 7,\n  \"hideDeleteIcons\" : false,\n  \"attrs\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ]\n      }\n    },\n    \".packages\" : {\n      \"ref-y\" : 40\n    },\n    \".delete-resource\" : {\n      \"resourceId\" : 77\n    },\n    \".success-status\" : {\n      \"display\" : \"block\"\n    },\n    \".resourceNode-text\" : {\n      \"text\" : \"NameNodeSG\",\n      \"y\" : \"2.6em\"\n    },\n    \".resourceNode-image\" : {\n      \"xlink:href\" : \"/images/aws/aws.png\",\n      \"display\" : \"\"\n    }\n  }\n}, {\n  \"type\" : \"opex.ResourceNode\",\n  \"size\" : {\n    \"width\" : 150,\n    \"height\" : 45\n  },\n  \"packageHeight\" : 25,\n  \"resourceNodeHeight\" : 40,\n  \"paddingBottom\" : 5,\n  \"minWidth\" : 150,\n  \"imageHeight\" : 18,\n  \"inPorts\" : [ ],\n  \"outPorts\" : [ ],\n  \"position\" : {\n    \"x\" : 288,\n    \"y\" : 356\n  },\n  \"angle\" : 0,\n  \"resourceNode\" : \"DataNodeSG\",\n  \"resource\" : {\n    \"name\" : \"DataNodeSG\",\n    \"resourceName\" : \"aws_security_group\"\n  },\n  \"image\" : \"/images/aws/aws.png\",\n  \"style\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"type\" : \"linearGradient\",\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ],\n        \"attrs\" : {\n          \"x1\" : \"0%\",\n          \"y1\" : \"0%\",\n          \"x2\" : \"0%\",\n          \"y2\" : \"100%\"\n        }\n      }\n    },\n    \".resourceNode-text\" : {\n      \"fill\" : \"white\"\n    }\n  },\n  \"packages\" : [ ],\n  \"id\" : \"aada5898-619d-4d73-b70a-2a18326881fb\",\n  \"z\" : 8,\n  \"hideDeleteIcons\" : false,\n  \"attrs\" : {\n    \".body\" : {\n      \"fill\" : {\n        \"stops\" : [ {\n          \"offset\" : \"0%\",\n          \"color\" : \"#008080\"\n        }, {\n          \"offset\" : \"100%\",\n          \"color\" : \"#008080\"\n        } ]\n      }\n    },\n    \".packages\" : {\n      \"ref-y\" : 40\n    },\n    \".delete-resource\" : {\n      \"resourceId\" : 75\n    },\n    \".success-status\" : {\n      \"display\" : \"block\"\n    },\n    \".resourceNode-text\" : {\n      \"text\" : \"DataNodeSG\",\n      \"y\" : \"2.6em\"\n    },\n    \".resourceNode-image\" : {\n      \"xlink:href\" : \"/images/aws/aws.png\",\n      \"display\" : \"\"\n    }\n  }\n} ]",
+  "preDestroyScript": null,
+  "postDestroyScript": null,
+  "providerName": "DummyProvider",
+  "connectionName": "DummyConnection",
+  "connectionType": "SSH",
+  "providerType": "aws",
+  "exportedByEmail": "info@opexsoftware.com",
+  "exportedOn": 1481212389794,
+  "preDeployScript": null,
+  "postDeployScript": null,
+  "description": "Two node hadoop cluster as demo",
+  "name": "ExampleHadoopCluster",
+  "resources": [
+    {
+      "dependsOn": null,
+      "connectionName": null,
+      "connectionType": null,
+      "resourceName": "aws_security_group",
+      "name": "DataNodeSG",
+      "packages": null,
+      "attributes": {
+        "egress": "[{\"from_port\":0,\"to_port\":0,\"protocol\":\"-1\",\"cidr_blocks\":[\"0.0.0.0/0\"]}]",
+        "ingress": "[{\"from_port\":22,\"to_port\":22,\"protocol\":\"tcp\",\"cidr_blocks\":[\"0.0.0.0/0\"]},{\"from_port\":50010,\"to_port\":50020,\"protocol\":\"tcp\",\"cidr_blocks\":[\"0.0.0.0/0\"]},{\"from_port\":50475,\"to_port\":50475,\"protocol\":\"tcp\",\"cidr_blocks\":[\"0.0.0.0/0\"]}]",
+        "description": null,
+        "name": "DataNodeSG",
+        "vpc_id": null
+      }
+    },
+    {
+      "dependsOn": null,
+      "connectionName": null,
+      "connectionType": null,
+      "resourceName": "aws_security_group",
+      "name": "NameNodeSG",
+      "packages": null,
+      "attributes": {
+        "egress": "[{\"from_port\":0,\"to_port\":0,\"protocol\":\"-1\",\"cidr_blocks\":[\"0.0.0.0/0\"]}]",
+        "description": null,
+        "ingress": "[{\"from_port\":22,\"to_port\":22,\"protocol\":\"tcp\",\"cidr_blocks\":[\"0.0.0.0/0\"]},{\"from_port\":8020,\"to_port\":8020,\"protocol\":\"tcp\",\"cidr_blocks\":[\"0.0.0.0/0\"]},{\"from_port\":50070,\"to_port\":50070,\"protocol\":\"tcp\",\"cidr_blocks\":[\"0.0.0.0/0\"]}]",
+        "name": "NameNodeSG",
+        "vpc_id": null
+      }
+    },
+    {
+      "dependsOn": null,
+      "connectionName": null,
+      "connectionType": null,
+      "resourceName": "aws_instance",
+      "name": "DataNode1",
+      "packages": [
+        {
+          "name": "hadoop-datanode",
+          "attributes": {
+            "namenodeIP": "${NameNode.private_ip}"
+          }
+        }
+      ],
+      "attributes": {
+        "user_data": null,
+        "tags": null,
+        "instance_type": "t2.micro",
+        "subnet_id": null,
+        "ami": "ami-afac2bb8",
+        "ebs_optimized": null,
+        "availability_zone": null,
+        "private_ip": null,
+        "key_name": null,
+        "name": "DataNode1",
+        "source_dest_check": "true",
+        "vpc_security_group_ids": "[\"${DataNodeSG.id}\"]",
+        "associate_public_ip_address": null,
+        "security_groups": "[]"
+      }
+    },
+    {
+      "dependsOn": null,
+      "connectionName": null,
+      "connectionType": null,
+      "resourceName": "aws_instance",
+      "name": "DataNode2",
+      "packages": [
+        {
+          "name": "hadoop-datanode",
+          "attributes": {
+            "namenodeIP": "${NameNode.private_ip}"
+          }
+        }
+      ],
+      "attributes": {
+        "tags": null,
+        "instance_type": "t2.micro",
+        "ami": "ami-afac2bb8",
+        "availability_zone": null,
+        "key_name": null,
+        "security_groups": "[]",
+        "user_data": null,
+        "subnet_id": null,
+        "ebs_optimized": null,
+        "private_ip": null,
+        "name": "DataNode2",
+        "source_dest_check": "true",
+        "vpc_security_group_ids": "[\"${DataNodeSG.id}\"]",
+        "associate_public_ip_address": null
+      }
+    },
+    {
+      "dependsOn": null,
+      "connectionName": null,
+      "connectionType": null,
+      "resourceName": "aws_instance",
+      "name": "NameNode",
+      "packages": [
+        {
+          "name": "hadoop-namenode",
+          "attributes": null
+        }
+      ],
+      "attributes": {
+        "tags": null,
+        "instance_type": "t2.micro",
+        "ami": "ami-afac2bb8",
+        "availability_zone": null,
+        "key_name": null,
+        "security_groups": "[]",
+        "user_data": null,
+        "subnet_id": null,
+        "ebs_optimized": null,
+        "private_ip": null,
+        "name": "NameNode",
+        "source_dest_check": "true",
+        "associate_public_ip_address": null,
+        "vpc_security_group_ids": "[\"${NameNodeSG.id}\"]"
+      }
+    }
+  ],
+  "location": null,
+  "type": null
+}

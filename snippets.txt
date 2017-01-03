@@ -1,0 +1,1 @@
+       #curl -k -i -H 'Authorization:${DeployNowUserEmail}:12345' -H 'Content-Type: application/json' -X POST -d '{ "name":"AWS_Automates_Provider", "json":{ "access_key":"${AWSAccessKey}", "secret_key":"${AWSSecretAccessKey}", "region":"${AWS::Region}" }, "type":"aws"}' 'https://127.0.0.1/DeployNow/rest/provider'

@@ -1,0 +1,499 @@
+---
+AWSTemplateFormatVersion: '2010-09-09'
+Description: AWS CloudFormation Template to create a VPC and deploy EC2 instance with
+  DeployNow application installed. **WARNING** This template creates an Amazon EC2
+  instance. You will be billed for the AWS resources used if you create a stack from
+  this template.
+Parameters:
+# Pick instance sizing for DeployNow Instance
+  InstanceType:
+    Description: DeployNow EC2 instance type
+    Type: String
+    Default: t2.small
+    AllowedValues:
+    - t2.nano
+    - t2.micro
+    - t2.small
+    - t2.medium
+    - t2.large
+    ConstraintDescription: must be a valid EC2 instance type.
+# Find keypair name to use with the DeployNow instance
+  KeyName:
+    Description: Name of an existing EC2 KeyPair to enable SSH access to the instance
+    Type: AWS::EC2::KeyPair::KeyName
+    ConstraintDescription: must be the name of an existing EC2 KeyPair.
+# S3 URL to the bucket/folder that contains DeployNow Packages
+  DeployNowURL:
+    Description: A S3 Bucket URL to the Directory with DeoployNow packages. Make sure to include trailing slash.
+    Default: s3://<bucket name>/path/to/packages/
+    Type: String
+    MinLength: '8'
+    MaxLength: '128'
+# User email address to use to create first admin level user
+  DeployNowUserEmail:
+    Description: An email address for the initial DeployNow user
+    Default: admin@yourcompany.com
+    Type: String
+    MinLength: '8'
+    MaxLength: '128'
+    AllowedPattern: "(.+)@(.+)\\.(.+)"
+# User password to give to newly created user as well as to original Admin user
+  UserPassword:
+    Description: A password to give new User of DeployNow. Only @,.#_ are accepted as special characters.
+    Default: password
+    Type: String
+    MinLength: '8'
+    MaxLength: '128'
+    AllowedPattern: "[\\w,@#.]+"
+# AWS Access Key for DeployNow to push initial environment
+  AWSAccessKey:
+    Description: AWS API Access Key to use for the Provider configuration on DeployNow
+    Type: String
+    MinLength: '12'
+    MaxLength: '64'
+# AWS Secres Access Key for DeployNow to push initial environmen
+  AWSSecretAccessKey:
+    Description: AWS API Secret Key to use for the Provider configuration on DeployNow
+    Type: String
+    MinLength: '24'
+    MaxLength: '256'
+# Instance Name to give to DeployNow Instance
+  InstanceName:
+    Description: A Name to give DeployNow Server Instance
+    Default: DeploynowServerInstance
+    Type: String
+    MinLength: '8'
+    MaxLength: '64'
+# Environment Name to give to new 5 Layer VPC environment in DeployNow
+  NewEnvironmentName:
+    Description: New 5 Layer VPC Environment Name in DeployNow
+    Default: MyNew-5Layer-VPC
+    Type: String
+    MinLength: '2'
+    MaxLength: '64'
+# Source CIDR for route tables and security group to allow connectivity from you to DeployNow
+  SSHLocation:
+    Description: " The IP address range that can be used to SSH to the EC2 instances"
+    Type: String
+    MinLength: '9'
+    MaxLength: '18'
+    Default: 0.0.0.0/0
+    AllowedPattern: "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})"
+    ConstraintDescription: must be a valid IP CIDR range of the form x.x.x.x/x.
+Mappings:
+# Ubuntu 14.04 LTS AMIs across different regions
+  AWSRegionArch2AMI:
+    us-east-1:
+      HVM64: ami-c8580bdf
+    us-west-2:
+      HVM64: ami-01f05461
+    us-west-1:
+      HVM64: ami-61074c01
+    eu-west-1:
+      HVM64: ami-1c4a046f
+    eu-central-1:
+      HVM64: ami-9c09f0f3
+    ap-northeast-1:
+      HVM64: ami-c88325a9
+    ap-northeast-2:
+      HVM64: ami-8ce236e2
+    ap-southeast-1:
+      HVM64: ami-1c2e887f
+    ap-southeast-2:
+      HVM64: ami-bf3d00dc
+    ap-south-1:
+      HVM64: ami-0155216e
+    us-east-2:
+      HVM64: ami-b7075dd2
+    sa-east-1:
+      HVM64: ami-900b96fc
+Resources:
+# Create VPC for DeployNow
+  VPC:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: 10.0.0.0/16
+      EnableDnsSupport: 'true'
+      EnableDnsHostnames: 'true'
+      Tags:
+      - Key: Application
+        Value: !Ref AWS::StackId
+      - Key: Name
+        Value: !Ref InstanceName
+      - Key: Owner
+        Value: "alex.balakersky"
+      - Key: ExpirationDate
+        Value: "2017-01-31"
+# Create subnet for DeployNow
+  Subnet:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VPC
+      CidrBlock: 10.0.0.0/24
+      Tags:
+      - Key: Application
+        Value: !Ref AWS::StackId
+      - Key: Name
+        Value: !Ref InstanceName
+      - Key: Owner
+        Value: "alex.balakersky"
+      - Key: ExpirationDate
+        Value: "2017-01-31"
+# Create Internet Gateway for the VPC
+  InternetGateway:
+    Type: AWS::EC2::InternetGateway
+    Properties:
+      Tags:
+      - Key: Application
+        Value: !Ref AWS::StackId
+# Attached IG to VPC
+  AttachGateway:
+    Type: AWS::EC2::VPCGatewayAttachment
+    Properties:
+      VpcId: !Ref VPC
+      InternetGatewayId: !Ref InternetGateway
+# Create Route Table
+  RouteTable:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId: !Ref VPC
+      Tags:
+      - Key: Application
+        Value: !Ref AWS::StackId
+      - Key: Name
+        Value: !Ref InstanceName
+      - Key: Owner
+        Value: "alex.balakersky"
+      - Key: ExpirationDate
+        Value: "2017-01-31"
+# Create Default Route to Default Gateway
+  Route:
+    Type: AWS::EC2::Route
+    DependsOn: AttachGateway
+    Properties:
+      RouteTableId:
+        Ref: RouteTable
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId:
+        Ref: InternetGateway
+# Associate subnet with Route table
+  SubnetRouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId:
+        Ref: Subnet
+      RouteTableId:
+        Ref: RouteTable
+# Create NACL
+  NetworkAcl:
+    Type: AWS::EC2::NetworkAcl
+    Properties:
+      VpcId:
+        Ref: VPC
+      Tags:
+      - Key: Application
+        Value: !Ref AWS::StackId
+      - Key: Name
+        Value: !Ref InstanceName
+      - Key: Owner
+        Value: "alex.balakersky"
+      - Key: ExpirationDate
+        Value: "2017-01-31"
+# Create NACL rules for HTTP, HTTPS, etc.
+  InboundHTTPNetworkAclEntry:
+    Type: AWS::EC2::NetworkAclEntry
+    Properties:
+      NetworkAclId:
+        Ref: NetworkAcl
+      RuleNumber: '100'
+      Protocol: '6'
+      RuleAction: allow
+      Egress: 'false'
+      CidrBlock: 0.0.0.0/0
+      PortRange:
+        From: '80'
+        To: '80'
+  InboundSSHNetworkAclEntry:
+    Type: AWS::EC2::NetworkAclEntry
+    Properties:
+      NetworkAclId:
+        Ref: NetworkAcl
+      RuleNumber: '101'
+      Protocol: '6'
+      RuleAction: allow
+      Egress: 'false'
+      CidrBlock: 0.0.0.0/0
+      PortRange:
+        From: '22'
+        To: '22'
+  InboundResponsePortsNetworkAclEntry:
+    Type: AWS::EC2::NetworkAclEntry
+    Properties:
+      NetworkAclId:
+        Ref: NetworkAcl
+      RuleNumber: '102'
+      Protocol: '6'
+      RuleAction: allow
+      Egress: 'false'
+      CidrBlock: 0.0.0.0/0
+      PortRange:
+        From: '1024'
+        To: '65535'
+  InboundHTTPSNetworkAclEntry:
+    Type: AWS::EC2::NetworkAclEntry
+    Properties:
+      NetworkAclId:
+        Ref: NetworkAcl
+      RuleNumber: '103'
+      Protocol: '6'
+      RuleAction: allow
+      Egress: 'false'
+      CidrBlock: 0.0.0.0/0
+      PortRange:
+        From: '443'
+        To: '443'
+  OutBoundHTTPNetworkAclEntry:
+    Type: AWS::EC2::NetworkAclEntry
+    Properties:
+      NetworkAclId:
+        Ref: NetworkAcl
+      RuleNumber: '100'
+      Protocol: '6'
+      RuleAction: allow
+      Egress: 'true'
+      CidrBlock: 0.0.0.0/0
+      PortRange:
+        From: '80'
+        To: '80'
+  OutBoundHTTPSNetworkAclEntry:
+    Type: AWS::EC2::NetworkAclEntry
+    Properties:
+      NetworkAclId:
+        Ref: NetworkAcl
+      RuleNumber: '101'
+      Protocol: '6'
+      RuleAction: allow
+      Egress: 'true'
+      CidrBlock: 0.0.0.0/0
+      PortRange:
+        From: '443'
+        To: '443'
+  OutBoundResponsePortsNetworkAclEntry:
+    Type: AWS::EC2::NetworkAclEntry
+    Properties:
+      NetworkAclId:
+        Ref: NetworkAcl
+      RuleNumber: '102'
+      Protocol: '6'
+      RuleAction: allow
+      Egress: 'true'
+      CidrBlock: 0.0.0.0/0
+      PortRange:
+        From: '1024'
+        To: '65535'
+# Associate Subnet with NACL
+  SubnetNetworkAclAssociation:
+    Type: AWS::EC2::SubnetNetworkAclAssociation
+    Properties:
+      SubnetId:
+        Ref: Subnet
+      NetworkAclId:
+        Ref: NetworkAcl
+# Create EIP for the Instance
+  IPAddress:
+    Type: AWS::EC2::EIP
+    DependsOn:
+    - AttachGateway
+    Properties:
+      Domain: vpc
+      InstanceId:
+        Ref: DeploynowServerInstance
+# Create security group with 22, HTTP, HTTPS allowing from your CIDR
+  InstanceSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      VpcId: !Ref VPC
+      GroupDescription: Enable SSH, HTTP, and HTTPS access
+      SecurityGroupIngress:
+      - IpProtocol: tcp
+        FromPort: '22'
+        ToPort: '22'
+        CidrIp: !Ref SSHLocation
+      - IpProtocol: tcp
+        FromPort: '80'
+        ToPort: '80'
+        CidrIp: !Ref SSHLocation
+      - IpProtocol: tcp
+        FromPort: '443'
+        ToPort: '443'
+        CidrIp: !Ref SSHLocation
+      Tags:
+      - Key: Application
+        Value: !Ref AWS::StackId
+      - Key: Name
+        Value: !Ref InstanceName
+      - Key: Owner
+        Value: "alex.balakersky"
+      - Key: ExpirationDate
+        Value: "2017-01-31"
+# Create DeployNow Instance
+  DeploynowServerInstance:
+    Type: AWS::EC2::Instance
+    DependsOn: AttachGateway
+    Metadata:
+      Comment: Install a simple application
+      AWS::CloudFormation::Init:
+        config:
+          packages:
+            apt:
+              s3cmd: []
+              python-pip: []
+              gdebi: []
+              curl: []
+          files:
+            /usr/local/bin/encrypt.sh:
+              content: !Sub |
+                #!/bin/bash
+                while [[ $# -gt 1 ]]
+                do
+                key="$1"
+                case $key in
+                    -e|--email)
+                    EMAILPASS="$2"
+                    shift
+                    ;;
+                    -l|--login)
+                    LOGINPASS="$2"
+                    shift
+                    ;;
+                    *)
+                    ;;
+                esac
+                shift
+                done
+                if [ -z "$EMAILPASS" -a "$EMAILPASS" != " " ]; 
+                then
+                    echo "You have not entered email password"
+                else
+                    echo $(/opt/dnow/embedded/jre/bin/java -cp '/opt/dnow/webapps/DeployNow/WEB-INF/lib/*' com.opex.dnow.core.util.EncryptionUtils --encrypt $EMAILPASS)
+                fi
+                if [ -z "$LOGINPASS" -a "$LOGINPASS" != " " ]; then
+                    echo "Login Password not entered!"
+                else
+                    echo $(/opt/dnow/embedded/jre/bin/java -cp '/opt/dnow/webapps/DeployNow/WEB-INF/lib/*' com.opex.dnow.core.util.EncryptionUtils --md5 $LOGINPASS)
+                fi
+              mode: "00755"
+              owner: "root"
+              group: "root"
+            /etc/cfn/cfn-hup.conf:
+              content: !Sub |
+                [main]
+                stack=${AWS::StackId}
+                region=${AWS::Region}
+              mode: "000400"
+              owner: "root"
+              group: "root"
+            /etc/cfn/hooks.d/cfn-auto-reloader.conf:
+              content: !Sub |
+                [cfn-auto-reloader-hook]
+                triggers=post.update
+                path=Resources.DeploynowServerInstance.Metadata.AWS::CloudFormation::Init
+                action=/usr/local/bin/cfn-init -v --stack ${AWS::StackName} --resource DeploynowServerInstance --region ${AWS::Region}
+                runas=root
+            /tmp/deploynow_mysql:
+              content: !Sub |
+                Mysql_Local=Y
+              mode: "00644"
+              owner: "root"
+              group: "root"
+          commands:
+            update:
+              command: "apt-get -y update && apt-get -y upgrade"
+              cwd: "/"
+          services:
+            sysvinit:
+              cfn-hup:
+                enabled: "true"
+                ensureRunning: "true"
+                files:
+                  - "/etc/cfn/cfn-hup.conf"
+                  - "/etc/cfn/hooks.d/cfn-auto-reloader.conf"
+    Properties:
+      ImageId: !FindInMap [AWSRegionArch2AMI, !Ref 'AWS::Region', 'HVM64']
+      InstanceType: !Ref InstanceType
+      IamInstanceProfile: !Ref EC2InstanceProfile
+      KeyName: !Ref KeyName
+      Tags:
+      - Key: Name
+        Value: !Ref InstanceName
+      - Key: Application
+        Value: !Ref 'AWS::StackId'
+      - Key: Owner
+        Value: "alex.balakersky"
+      - Key: ExpirationDate
+        Value: "2017-01-31"
+      NetworkInterfaces:
+      - DeviceIndex: '0'
+        GroupSet:
+        - Ref: InstanceSecurityGroup
+        AssociatePublicIpAddress: 'true'
+        DeleteOnTermination: 'true'
+        SubnetId: !Ref Subnet
+      UserData:
+# Install DeployNow package, update admin password, create user, provider, connection, import environment, deploy 5-layer VPC, update CF on successful completion
+        Fn::Base64: !Sub |
+              #!/bin/bash -xe
+              apt-get install python-setuptools
+              easy_install https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-latest.tar.gz
+              ln /usr/local/bin/cfn-hup /etc/init.d/
+              initctl reload-configuration
+              chmod 700 /etc/init.d/cfn-hup
+              chown root:root /etc/init.d/cfn-hup
+              update-rc.d cfn-hup defaults
+              update-rc.d cfn-hup enable
+              /usr/local/bin/cfn-init -v --stack ${AWS::StackName} --resource DeploynowServerInstance --region ${AWS::Region}
+              pip install boto awscli
+              deploynow_file=$(aws s3 ls ${DeployNowURL} | tail -n 1 | awk '{print $4}')
+              /usr/local/bin/aws s3 cp ${DeployNowURL}$deploynow_file /root/deploynow.deb
+              /usr/bin/gdebi -n /root/deploynow.deb
+              for i in $(seq 1 12); do echo "Waiting for DeployNow to initialize" ; echo ; sleep 5 ; done
+              newpass=$(/usr/local/bin/encrypt.sh -l ${UserPassword} | grep MD5 | awk '{print $4}')
+              /opt/dnow/embedded/mysql/bin/mysql -u root -ppassword -D dnow -e "update USER set encryptedPassword = '$newpass' where email = 'info@opexsoftware.com';"
+              /opt/dnow/embedded/mysql/bin/mysql -u root -ppassword -D dnow -e "insert into USER (active,admin,email,encryptedPassword,name,orgURL,verified) values (1,1,'${DeployNowUserEmail}','$newpass','${InstanceName}','http://reancloud.com',1);"
+              /opt/dnow/embedded/mysql/bin/mysql -u root -ppassword -D dnow -e "insert into USERS_ROLES (userId,roleId) values (2,1);"
+              curl -k -i -H 'Authorization:${DeployNowUserEmail}:${UserPassword}' -H 'Content-Type: application/json' -X POST -d '{ "name":"AWS_Automated_Provider", "json":{ "access_key":"${AWSAccessKey}", "secret_key":"${AWSSecretAccessKey}", "region":"${AWS::Region}" }, "type":"aws"}' 'https://127.0.0.1/DeployNow/rest/provider'
+              curl -k -i -H 'Authorization:${DeployNowUserEmail}:${UserPassword}' -H 'Content-Type: application/json' -X POST -d '{ "name":"AWS_Automated_Connection", "user":"ubuntu", "type":"SSH","secureKey": "dummyKey" }' 'https://127.0.0.1/DeployNow/rest/conn'
+              curl -k -i -H 'Authorization:${DeployNowUserEmail}:${UserPassword}' -H 'Content-Type: application/json' -X POST -d '{ "deployConfig": { "destroyAfterMin": "180", "emailToNotify": "${DeployNowUserEmail}", "deployEmailTemplateName": "deploy_successful.html", "destroyEmailTemplateName":"destroying.html"}, "copyConfig": { "newEnvironment": "${NewEnvironmentName}", "originalEnvironment": "REANSecuredNetworkArchitecure", "newEnvProvider": "AWS_Automated_Provider", "tags": { "UserEmail":"${DeployNowUserEmail}", "Name" :"${AWS::StackName}" } } }' 'https://127.0.0.1/DeployNow/rest/env/copyanddeploy' -D /tmp/copyAndDeploy.log
+              /usr/local/bin/cfn-signal -e $? --stack ${AWS::StackName} --resource DeploynowServerInstance --region ${AWS::Region}
+    CreationPolicy:
+      ResourceSignal:
+        Timeout: PT15M
+# Create EC2 S3 ReadOnly Role to access DeployNow packages
+  ec2S3Role:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+        - Effect: Allow
+          Principal:
+            Service:
+            - ec2.amazonaws.com
+          Action:
+          - sts:AssumeRole
+      Path: "/"
+      ManagedPolicyArns:
+      - arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess
+  EC2InstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      Path: "/"
+      Roles:
+      - Ref: ec2S3Role
+# Output resulting EIP URL to access DeployNow Web interface
+Outputs:
+  URL:
+    Value: !Sub |
+      https://${IPAddress}
+    Description: URL for the DeployNow Web Interface
+
