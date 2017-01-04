@@ -344,12 +344,12 @@ Resources:
       Comment: Install a simple application
       AWS::CloudFormation::Init:
         config:
-          packages:
-            apt:
-              s3cmd: []
-              python-pip: []
-              gdebi: []
-              curl: []
+#          packages:
+#            apt:
+#              s3cmd: []
+#              python-pip: []
+#              gdebi: []
+#              curl: []
           files:
             /usr/local/bin/encrypt.sh:
               content: !Sub |
@@ -443,7 +443,8 @@ Resources:
 # Install DeployNow package, update admin password, create user, provider, connection, import environment, deploy 5-layer VPC, update CF on successful completion
         Fn::Base64: !Sub |
               #!/bin/bash -xe
-              apt-get install python-setuptools
+              apt-get update && apt-get upgrade -y
+              apt-get install -y python-setuptools s3cmd python-pip gdebi curl
               easy_install https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-latest.tar.gz
               ln /usr/local/bin/cfn-hup /etc/init.d/
               initctl reload-configuration
