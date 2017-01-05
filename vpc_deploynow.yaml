@@ -497,4 +497,13 @@ Outputs:
     Value: !Sub |
       https://${IPAddress}
     Description: URL for the DeployNow Web Interface
+  Name:
+    Value: !Ref InstanceName
+    Description: DeployNow Instance Name
+  UserLogin:
+    Value: !Ref DeployNowUserEmail
+    Description: DeployNow User Email Login
+  UserPassword:
+    Value: !Ref UserPassword
+    Description: DeployNow User Password
 
